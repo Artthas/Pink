@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Alexander Gnetov](https://up.htmlacademy.ru/adaptive/22/user/1519399).
-* Наставник: `Неизвестно`.
+* Наставник: [Алина Шаймиева](https://htmlacademy.ru/profile/id74223).
 
 ---
 
