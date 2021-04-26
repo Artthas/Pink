@@ -105,7 +105,6 @@
 }
 
 .rates__table-header:nth-of-type(2) {
-
   @media (min-width: @tablet-width) {
     border-left: none;
   }
@@ -120,7 +119,6 @@
 }
 
 .rates__table-data:last-of-type {
-
   @media (min-width: @tablet-width) {
     border-right: 2px solid @grey-light;
   }
@@ -177,7 +175,6 @@
 }
 
 .rates__table-data:not(:first-of-type) span {
-
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -214,9 +211,9 @@
   margin-right: 19px;
 }
 
-#btn-1:checked ~ .rates__toggles label[for="btn-1"],
-#btn-2:checked ~ .rates__toggles label[for="btn-2"],
-#btn-3:checked ~ .rates__toggles label[for="btn-3"] {
+.rates__toggle-input-1:checked ~ .rates__toggles label[for="btn-1"],
+.rates__toggle-input-2:checked ~ .rates__toggles label[for="btn-2"],
+.rates__toggle-input-3:checked ~ .rates__toggles label[for="btn-3"] {
   background-color: transparent;
   border: 3px solid @grey;
   width: 12px;
@@ -225,11 +222,11 @@
   margin-right: 17px;
 }
 
-#btn-1:checked ~ .rates__table {
+.rates__toggle-input-1:checked ~ .rates__table {
   transform: translate(0);
 }
 
-#btn-2:checked ~ .rates__table {
+.rates__toggle-input-2:checked ~ .rates__table {
   transform: translate(-33%);
 
   @media (min-width: @tablet-width) {
@@ -237,7 +234,7 @@
   }
 }
 
-#btn-3:checked ~ .rates__table {
+.rates__toggle-input-3:checked ~ .rates__table {
   transform: translate(-66%);
 
   @media (min-width: @tablet-width) {
