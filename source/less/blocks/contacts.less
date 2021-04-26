@@ -1,26 +1,99 @@
 .contacts {
   padding-top: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+  }
 }
 
 .contacts__wrapper {
   width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0 auto;
+  }
 }
 
 .contacts__intro {
+  text-align: center;
   font-weight: 300;
   font-size: 24px;
   line-height: 28.8px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .contacts__list {
   list-style: none;
+  padding: 0;
+  margin-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 55px;
+  }
 }
+.contacts__item {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contacts__item:nth-of-type(3) {
+  width: 100%;
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+}
+
+.contacts__item:nth-of-type(2) {
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
+}
+
 
 .contacts__text {
   font-weight: 700;
   font-size: 18px;
   line-height: 25px;
+  margin-bottom: 0;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.contacts__address {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .contacts__tel,
@@ -35,7 +108,38 @@
 }
 
 .contacts__map {
+  position: relative;
   border: none;
   background-color: @grey-super-light;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
+}
+
+.contacts__map-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 33px;
+  position: absolute;
+  z-index: 1;
+  background-image: url("../../img/triangle-map.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 33px;
+
+  @media (min-width: @tablet-width) {
+    height: 68px;
+    background-size: 100% 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 103px;
+    background-size: 100% 103px;
+  }
 }
