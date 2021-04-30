@@ -1,35 +1,103 @@
-.pop-up__wrapper {
-  width: 280px;
+.pop-up__failure .pop-up__button-wrapper {
+  padding-bottom: 50px;
+  margin-top: 45px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 60px;
+    padding-top: 50px;
+    background-color: @grey-super-light;
+  }
 }
 
-.pop-up__button-wrapper {
+.pop-up__success .pop-up__button-wrapper {
+  margin-top: 45px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   background-color: @grey-super-light;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+  }
 }
 
 .pop-up__title {
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
-.pop-up__text-success {
+.pop-up__text {
+  width: 280px;
+  margin: 0 auto;
   text-align: center;
-  margin: 37px 0 41px 0;
-}
 
-.pop-up__text-failure {
-  text-align: center;
-  margin: 37px 0 0 0;
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    width: 350px;
+  }
 }
 
 .pop-up__success,
 .pop-up__failure {
-  padding-top: 44px;
+  width: 100%;
+  position: fixed;
+  display: none;
+  padding-top: 40px;
   box-shadow: 0 7px 15px @black-shadow;
+  background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    margin: 0 auto;
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+  }
+}
+
+.pop-up__wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.pop-up--show {
+  display: block;
 }
 
 .pop-up__button-close {
+  display: block;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -40,5 +108,5 @@
   padding: 17px 0;
   color: @white;
   background-color: @green;
-  margin: 50px 0;
+  margin: 0 auto;
 }
