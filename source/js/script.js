@@ -15,3 +15,22 @@ navToggle.addEventListener("click", function() {
     navMain.classList.remove("page-header__nav--opened");
   }
 });
+
+/* Sending Form */
+
+const popupFailure = document.querySelector(".pop-up__failure");
+const popupSuccess = document.querySelector(".pop-up__success");
+const popup = document.querySelector(".pop-up");
+const popupClose = document.querySelector(".pop-up__button-close");
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", function (evt) {
+  popup.classList.add("pop-up__wrapper");
+  popupSuccess.classList.add("pop-up--show");
+});
+
+buttonOpenWriteUs.addEventListener("click", function (evt) {
+  popup.classList.remove("pop-up__wrapper");
+  popupSuccess.classList.remove("pop-up--show");
+  popupFailure.classList.remove("pop-up--show");
+});

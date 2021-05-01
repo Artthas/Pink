@@ -1,9 +1,62 @@
-.form__wrapper {
-  width: 280px;
+.page-main__wrapper {
+  position: relative;
+  z-index: -1;
+  box-sizing: border-box;
+  background-color: @dark-blue;
+  padding-top: 105px;
+  padding-bottom: 51px;
+  background-image: url("../../img/back-palace-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/back-palace-tablet.png");
+    padding-top: 191px;
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/back-palace-desktop.png");
+    padding-top: 184px;
+    padding-bottom: 104px;
+  }
 }
 
-.form fieldset {
-  border: none;
+.page-main__title {
+  width: 280px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
+}
+
+.form {
+  margin-top: 54px;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
 
 .form legend {
@@ -11,18 +64,60 @@
   text-transform: uppercase;
   text-align: center;
   color: @red;
+  padding-left: 31px;
+  padding-right: 31px;
 }
 
 .form__caption {
   line-height: 30px;
   width: 280px;
+  margin: 0 auto 45px auto;
   text-align: center;
-  margin-top: 54px;
-  margin-bottom: 27px;
+  order: -4;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 95px;
+  }
+}
+
+.form__caption span {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .form p {
   padding: 0;
+}
+
+.form__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+    margin: 0;
+  }
 }
 
 .form__button-submit {
@@ -36,28 +131,59 @@
   padding: 17px 0;
   color: @white;
   background-color: @green;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+    margin: 0;
+  }
 }
 
 .form__subscription {
+  display: block;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.form__subscription span {
+.form__subscription span:first-of-type {
   color: @red;
+}
+
+.form__subscription span:last-of-type {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 // User Name
 
 .form__user-name {
   width: 280px;
-  padding: 0 0 42px 0;
+  margin: 0 auto 45px auto;
+  padding: 0;
+  order: -3;
+  border: none;
+
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 46%;
+    margin: 0;
+  }
 }
 
 .form__user-name label {
   line-height: 30px;
   text-transform: uppercase;
   color: @red;
+  margin-right: 20px;
 }
 
 .form__user-name input {
@@ -77,13 +203,43 @@
 .form__user-name p {
   margin-top: 27px;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+  }
+}
+
+.form__user-name p:first-of-type {
+  margin-top: 0;
 }
 
 // User Achievements
 
 .form__user-achievements {
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    border: 2px solid @grey-light;
+  }
+}
+
+.form__wrapper-user-achievements {
   background-color: @grey-super-light;
-  padding: 42px 0;
+  padding-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 60px;
+    margin-top: 65px;
+    background-color: transparent;
+  }
 }
 
 .form__user-achievements legend {
@@ -94,28 +250,99 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 280px 270px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    column-gap: 30px;
+    row-gap: 55px;
+  }
 }
 
 .form__user-achievements-item:not(:first-of-type) {
   margin-top: 47px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
 .form__user-achievements-item label {
   font-size: 18px;
   line-height: 30px;
+  padding-left: 59px;
+  position: relative;
+}
+
+.form__user-achievements-item label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -7px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid @grey-light;
+  border-radius: 1px;
+  background-color: @white;
+}
+
+.form__user-achievements-symbol:checked + label::before {
+  background-image: url("../../img/daw.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 // User Contacts
 
 .form__user-contacts {
   width: 280px;
-  padding: 15px 0 42px 0;
+  margin: 0 auto;
+  padding: 40px 0 42px 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    order: -1;
+    border: 2px solid @grey-light;
+    margin-top: 65px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__user-contacts legend {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }
 
 .form__user-contacts label {
+  display: block;
   line-height: 30px;
   text-transform: uppercase;
   color: @red;
+  margin-bottom: 10px;
+  margin-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
 }
 
 .form__user-contacts input {
@@ -135,17 +362,56 @@
 .form__user-contacts p {
   margin-top: 27px;
   margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 45.5%;
+    margin: 0;
+  }
+}
+
+.form__user-contacts p:first-of-type {
+  margin: 0;
 }
 
 // User App
 
 .form__user-app {
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 0 42px 0;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding-bottom: 60px;
+    border: 2px solid @grey-light;
+  }
+}
+
+.form__wrapper-user-app {
   background-color: @grey-super-light;
-  padding: 42px 0;
+  padding-top: 42px;
+
+  @media (min-width: @tablet-width) {
+    order: -2;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 46%;
+  }
 }
 
 .form__user-app legend {
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .form__user-app-list {
@@ -155,23 +421,63 @@
 }
 
 .form__user-app-item:not(:last-of-type) {
-  margin-bottom: 38px;
+  margin-bottom: 45px;
 }
 
 .form__user-app-item label {
   font-size: 18px;
   line-height: 30px;
+  padding-left: 70px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 61px;
+    margin-left: 60px;
+  }
+}
+
+.form__user-app-item label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+  width: 37px;
+  height: 37px;
+  border: 2px solid @grey-light;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.form__user-app-symbol:checked + label::before {
+  background-image: url("../../img/round.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 // User Emotion
 
 .form__user-emotion {
   width: 280px;
-  padding: 42px 0 0 0;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  margin-top: 42px;
   margin-bottom: 40px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    border: 2px solid @grey-light;
+    margin-top: 65px;
+    padding: 42px 60px 53px 60px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 45px;
+  }
 }
 
-.form__user-emotion label {
+.form__user-emotion legend {
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
@@ -179,13 +485,21 @@
   margin-top: 42px;
 }
 
-.form__user-emotion textarea {
+.form__user-text {
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
   padding: 23px 20px;
   width: 100%;
   min-height: 201px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 193px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 128px;
+  }
 }
 
 .form__user-emotion textarea::placeholder {
