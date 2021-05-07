@@ -23,9 +23,67 @@
   text-align: center;
 }
 
+.page-footer__logo-img {
+  margin-right: 7px;
+}
+
+.page-footer__link:hover .page-footer__logo-text path,
+.page-footer__link:focus .page-footer__logo-text path {
+  fill: @red;
+}
+
+.page-footer__link:active .page-footer__logo-text path {
+  fill: @grey;
+}
+
+.page-footer__link:active {
+  opacity: 0.3;
+}
+
+.page-footer__link--active:active {
+  opacity: 1;
+}
+
+.page-footer__link--active:hover .page-footer__logo-text path,
+.page-footer__link--active:focus .page-footer__logo-text path {
+  fill: @grey;
+}
+
 .page-footer__social-list {
+  padding: 0;
+  margin: 35px auto 30px auto;
+  width: 169px;
   list-style: none;
   display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 163px;
+  }
+}
+
+.page-footer__social-link {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 51px;
+  height: 51px;
+  border: 3px solid @grey-light;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: @grey;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .page-footer__copyright {
@@ -41,4 +99,13 @@
 
 .page-footer__copyright-logo {
   height: 34px;
+}
+
+.page-footer__copyright-link:hover path,
+.page-footer__copyright-link:focus path {
+  fill: @grey;
+}
+
+.page-footer__copyright-link:active path {
+  opacity: 0.3;
 }

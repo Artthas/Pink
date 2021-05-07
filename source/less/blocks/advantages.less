@@ -1,4 +1,4 @@
-.advantages { // Комментарий
+.advantages {
   padding-top: 40px;
   background-color: @grey-super-light;
   background-image: linear-gradient(174deg, @white 240px, transparent 240px);
@@ -76,6 +76,18 @@
     center bottom,
     center 107%;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../../img/retina/screen-friend-mobile@2x.png"),
+      url("../../img/retina/phone-mobile@2x.png");
+    background-size:
+      136px 245px,
+      157px 320px;
+    background-position:
+      center bottom,
+      center 107.6%;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 110px 0 14px 0;
     width: 620px;
@@ -88,6 +100,18 @@
     background-position:
       3.5% bottom,
       0% 44px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/retina/screen-friend-tablet@2x.png"),
+        url("../../img/retina/phone-tablet@2x.png");
+      background-size:
+        237px 421px,
+        268px 547px;
+      background-position:
+        4.1% bottom,
+        0% 47px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -132,6 +156,24 @@
       center 15%,
       top center,
       center 53%;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(to bottom, transparent 53%, @grey-super-light 53%),
+        url("../../img/retina/screen-mood-desktop@2x.png"),
+        url("../../img/retina/phone-desktop@2x.png"),
+        url("../../img/shadow.png");
+      background-size:
+        100% 100%,
+        165px 294px,
+        186px 382px,
+        300px 17px;
+      background-position:
+        0% 0%,
+        49.9% 17%,
+        top center,
+        center 53%;
+    }
   }
 }
 
@@ -152,6 +194,24 @@
       center 15%,
       top center,
       center 53%;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(to bottom, transparent 53%, @grey-super-light 53%),
+        url("../../img/retina/screen-world-desktop@2x.png"),
+        url("../../img/retina/phone-desktop@2x.png"),
+        url("../../img/shadow.png");
+      background-size:
+        100% 100%,
+        165px 294px,
+        186px 382px,
+        300px 17px;
+      background-position:
+        0% 0%,
+        49.9% 17%,
+        top center,
+        center 53%;
+    }
   }
 }
 
@@ -172,6 +232,24 @@
       center 15%,
       top center,
       center 53%;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(to bottom, transparent 53%, @grey-super-light 53%),
+        url("../../img/retina/screen-world-desktop@2x.png"),
+        url("../../img/retina/phone-desktop@2x.png"),
+        url("../../img/shadow.png");
+      background-size:
+        100% 100%,
+        165px 294px,
+        186px 382px,
+        300px 17px;
+      background-position:
+        0% 0%,
+        49.9% 17%,
+        top center,
+        center 53%;
+    }
   }
 }
 
@@ -235,9 +313,9 @@
     min-height: 276px;
     margin: 0 auto;
     background-image:
-      url("../../img/timer-inner-round-tablet.png"),
-      url("../../img/timer-outer-round-tablet.png"),
-      url("../../img/timer-number-tablet.png");
+      url("../../img/timer-inner-round-tablet.svg"),
+      url("../../img/timer-outer-round-tablet.svg"),
+      url("../../img/timer-number-tablet.svg");
     background-repeat:
       no-repeat,
       no-repeat,
@@ -252,18 +330,14 @@
     width: 940px;
     margin: 0 auto;
     min-height: 345px;
-    background-image:
-      url("../../img/timer-inner-round-desktop.png"),
-      url("../../img/timer-outer-round-desktop.png"),
-      url("../../img/timer-number-desktop.png");
-    background-repeat:
-      no-repeat,
-      no-repeat,
-      no-repeat;
     background-position:
       3.3% 76%,
       left center,
       10.5% 58%;
+    background-size:
+      252px 252px,
+      298px 345px,
+      138px 94px;
   }
 }
 
