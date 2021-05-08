@@ -1,6 +1,4 @@
-.download { // Комментарий
-  position: relative;
-  z-index: -1;
+.download {
   box-sizing: border-box;
   background-color: @dark-blue;
   padding-bottom: 38px;
@@ -25,6 +23,13 @@
     height: 729px;
     padding-top: 212px;
     padding-bottom: 119px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/retina/screen-tablet@2x.png"),
+        url("../../img/retina/phone-hand-tablet@2x.png"),
+        url("../../img/retina/back-palace-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -47,6 +52,13 @@
     height: 853px;
     padding-top: 224px;
     padding-bottom: 130px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/retina/screen-desktop@2x.png"),
+        url("../../img/retina/phone-hand-desktop@2x.png"),
+        url("../../img/retina/back-palace-desktop@2x.png");
+    }
   }
 }
 
@@ -69,6 +81,13 @@
     49.8% 208px,
     49.8% 176px,
     0% 0%;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../../img/retina/screen-mobile@2x.png"),
+      url("../../img/retina/phone-hand-mobile@2x.png"),
+      url("../../img/retina/back-palace-mobile@2x.png");
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -140,29 +159,63 @@
 }
 
 .download__list {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 0 20px;
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 65px;
+    margin-bottom: 45px;
+  }
 }
 
 
 .download__button {
-  padding-top: 13px;
-  padding-bottom: 13px;
-  border: 3px solid @white;
-  border-radius: 35px;
-  text-align: center;
-  margin-top: 28px;
-}
-
-.download__button a {
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: @white;
   text-decoration: none;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 15px;
+  border: 3px solid @white;
+  border-radius: 35px;
+  text-align: center;
+  margin-top: 28px;
+
+  &:hover,
+  &:focus {
+    background-color: @white;
+    color: @red;
+  }
+
+  &:active {
+    color: @red-transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 21px;
+  }
 }
 
 .download__availability {
   text-align: center;
   font-weight: 300;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }

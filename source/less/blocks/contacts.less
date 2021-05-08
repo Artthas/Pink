@@ -1,4 +1,4 @@
-.contacts { // Комментарий
+.contacts {
   padding-top: 50px;
 
   @media (min-width: @tablet-width) {
@@ -63,6 +63,19 @@
 .contacts__item {
   text-align: center;
   margin-bottom: 25px;
+}
+
+.contacts__item a {
+  &:hover,
+  &:focus {
+    color: @grey;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
 }
 
 .contacts__item:nth-of-type(3) {
