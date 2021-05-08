@@ -1,12 +1,55 @@
 .page-main__wrapper {
+  position: relative;
+  z-index: -1;
+  box-sizing: border-box;
   background-color: @dark-blue;
+  padding-top: 105px;
+  padding-bottom: 51px;
+  background-image: url("../../img/back-palace-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/retina/back-palace-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/back-palace-tablet.png");
+    padding-top: 191px;
+    padding-bottom: 74px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/retina/back-palace-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/back-palace-desktop.png");
+    padding-top: 184px;
+    padding-bottom: 104px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/retina/back-palace-desktop@2x.png");
+    }
+  }
 }
 
 .page-main__title {
-  font-weight: 300;
+  width: 280px;
+  margin: 0 auto;
   font-size: 24px;
   line-height: 33px;
-  text-align: center;
+  font-weight: 300;
   color: @white;
-  width: 280px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 940px;
+  }
 }
