@@ -34,3 +34,21 @@ buttonOpenWriteUs.addEventListener("click", function (evt) {
   popupSuccess.classList.remove("pop-up--show");
   popupFailure.classList.remove("pop-up--show");
 });
+
+/* Choosing Range */
+
+const publishLabel = document.querySelectorAll(".photos__publish-label");
+const publishRange = document.querySelectorAll(".photos__publish-range-controls");
+
+const buttonClick = function (item, button) {
+  button.addEventListener("click", function () {
+    document.querySelector(".photos__publish-range-controls--active").classList.remove("photos__publish-range-controls--active");
+    document.querySelector(".photos__publish-label--active").classList.remove("photos__publish-label--active");
+    button.classList.add("photos__publish-label--active");
+    item.classList.add("photos__publish-range-controls--active");
+  });
+}
+
+for (let i = 0; i < publishRange.length; i++) {
+  buttonClick(publishRange[i], publishLabel[i]);
+}
