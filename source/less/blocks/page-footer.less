@@ -19,24 +19,54 @@
   }
 }
 
+.page-footer__full-beauty-img {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
 .page-footer__logo {
   text-align: center;
 }
 
 .page-footer__logo-img {
-  margin-right: 7px;
+  fill: @red;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__text-img {
+  fill: @grey;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .page-footer__link {
   color: transparent;
 }
 
-.page-footer__link:hover .page-footer__logo-text path,
-.page-footer__link:focus .page-footer__logo-text path {
+.page-footer__link:hover .page-footer__text-img,
+.page-footer__link:focus .page-footer__text-img {
   fill: @red;
 }
 
-.page-footer__link:active .page-footer__logo-text path {
+.page-footer__link:hover svg,
+.page-footer__link:focus svg {
+  fill: @red;
+}
+
+.page-footer__link--active:hover svg,
+.page-footer__link--active:focus svg {
+  fill: @grey;
+}
+
+.page-footer__link:active svg {
   fill: @grey;
 }
 
@@ -48,8 +78,8 @@
   opacity: 1;
 }
 
-.page-footer__link--active:hover .page-footer__logo-text path,
-.page-footer__link--active:focus .page-footer__logo-text path {
+.page-footer__link--active:hover .page-footer__text-img,
+.page-footer__link--active:focus .page-footer__text-img {
   fill: @grey;
 }
 
@@ -105,11 +135,11 @@
   height: 34px;
 }
 
-.page-footer__copyright-link:hover path,
-.page-footer__copyright-link:focus path {
+.page-footer__copyright-link:hover svg,
+.page-footer__copyright-link:focus svg {
   fill: @grey;
 }
 
-.page-footer__copyright-link:active path {
+.page-footer__copyright-link:active svg {
   opacity: 0.3;
 }

@@ -13,8 +13,33 @@
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: inline-block;
-    margin-right: 7px;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__text-img {
+  x: 0;
+  y: 0;
+
+  @media (min-width: @tablet-width) {
+    x: 72;
+    y: 17;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__full-beauty-img {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
   }
 }
 
@@ -22,6 +47,17 @@
   height: 23px;
 
   @media (min-width: @tablet-width) {
+    height: 40px;
+  }
+}
+
+.page-header__link svg {
+  fill: @white;
+  width: 74px;
+  height: 23px;
+
+  @media (min-width: @tablet-width) {
+    width: 147px;
     height: 40px;
   }
 }
@@ -262,16 +298,16 @@
   opacity: 1;
 }
 
-.page-header__link:hover path,
-.page-header__link:focus path {
+.page-header__link:hover svg,
+.page-header__link:focus svg {
   fill: @red;
 }
 
-.page-header__link--active:hover path,
-.page-header__link--active:focus path {
+.page-header__link--active:hover svg,
+.page-header__link--active:focus svg {
   fill: @white;
 }
 
-.page-header__link:active path {
+.page-header__link:active svg {
   fill: @white;
 }
