@@ -52,6 +52,7 @@
 }
 
 .rates__table-header-wrapper {
+  position: relative;
   box-sizing: border-box;
   max-width: 280px;
   margin: 0 auto;
@@ -70,8 +71,34 @@
   }
 }
 
+.rates__table-header--hit .rates__table-header-wrapper::before {
+  position: absolute;
+  left: 4%;
+  top: 12%;
+  content: "Хит";
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: @white;
+  transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    left: 4%;
+    top: 10%;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 7%;
+    top: 17%;
+  }
+}
+
 .rates__table-header--hit .rates__table-header-wrapper {
-  background-image: linear-gradient(-45deg, transparent 80%, @red 80%, @red 90%, transparent 90%);
+  background-image: linear-gradient(-45deg, transparent 82%, @red 82%, @red 91%, transparent 91%);
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(-45deg, transparent 76%, @red 76%, @red 87%, transparent 87%);
+  }
 }
 
 .rates__table-header span {
@@ -137,6 +164,10 @@
     border-bottom: 2px solid @grey-light;
     width: 25%;
   }
+}
+
+.rates__table-data svg {
+  height: auto;
 }
 
 .rates__table-data-wrapper {

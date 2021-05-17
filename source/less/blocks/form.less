@@ -157,7 +157,7 @@
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 23px 20px;
+  padding: 22px 20px;
   width: 100%;
 
   &:hover {
@@ -315,6 +315,7 @@
 }
 
 .form__user-contacts label {
+  width: 130px;
   display: block;
   line-height: 30px;
   text-transform: uppercase;
@@ -333,8 +334,12 @@
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 23px 20px;
+  padding: 22px 20px;
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    border-right: 63px solid @grey-light;
+  }
 
   &:hover {
     border-color: @grey;
@@ -342,6 +347,35 @@
 
   &:focus {
     border-color: @red;
+
+    @media (min-width: @tablet-width) {
+      border-right: 63px solid @grey;
+    }
+  }
+}
+
+.form__user-contacts p::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    right: 21px;
+    top: 20%;
+    width: 20px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form__user-contacts p:first-of-type::before {
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/phone-icon.svg");
+  }
+}
+
+.form__user-contacts p:last-of-type::before {
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/mail-icon.svg");
   }
 }
 
@@ -352,6 +386,7 @@
 }
 
 .form__user-contacts p {
+  position: relative;
   margin-top: 27px;
   margin-bottom: 0;
 
