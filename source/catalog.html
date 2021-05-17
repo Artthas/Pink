@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
@@ -18,10 +18,14 @@
             <div class="page-header__nav-list-item-wrapper">
               <div class="page-header__logo">
                 <a class="page-header__link" href="index.html">
-                  <svg width="147" height="40">
-                    <use class="page-header__logo-img" xlink:href="img/sprite.svg#main-logo-icon"></use>
-                    <use class="page-header__text-img" xlink:href="img/sprite.svg#main-text-icon"></use>
-                    <use class="page-header__full-beauty-img" xlink:href="img/sprite.svg#main-full-beauty-icon-1"></use>
+                  <svg class="page-header__logo-img" width="59" height="40">
+                    <use xlink:href="img/sprite.svg#main-logo-icon"></use>
+                  </svg>
+                  <svg class="page-header__text-img" width="74" height="23">
+                    <use xlink:href="img/sprite.svg#main-text-icon"></use>
+                  </svg>
+                  <svg class="page-header__full-beauty-img" width="147" height="40">
+                    <use xlink:href="img/sprite.svg#main-full-beauty-icon-1"></use>
                   </svg>
                 </a>
               </div>
@@ -80,6 +84,9 @@
           <blockquote class="photos__list-item">
             <a class="photos__list-item-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
                 <img class="photos__list-item-img" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile.jpg 2x" alt="Камера снимает машину">
@@ -94,6 +101,9 @@
           <blockquote class="photos__list-item">
             <a class="photos__list-item-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
                 <img class="photos__list-item-img" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile.jpg 2x" alt="Ударная установка">
@@ -108,6 +118,9 @@
           <blockquote class="photos__list-item">
             <a class="photos__list-item-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
                 <img class="photos__list-item-img" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile.jpg 2x" alt="Прозрачный потолок с видом на небоскрёб">
@@ -122,6 +135,9 @@
           <blockquote class="photos__list-item">
             <a class="photos__list-item-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
                 <img class="photos__list-item-img" src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile.jpg 2x" alt="Кубанская бахча">
@@ -136,6 +152,9 @@
           <blockquote class="photos__list-item">
             <a class="photos__list-item-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-5-desktop.webp 1x, img/photo-5-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-5-tablet.webp 1x, img/photo-5-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-5-mobile.webp 1x, img/photo-5-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
                 <img class="photos__list-item-img" src="img/photo-5-mobile.jpg" srcset="img/photo-5-mobile.jpg 2x" alt="Ноги на фоне обрыва">
@@ -150,6 +169,9 @@
           <blockquote class="photos__list-item">
             <a class="photos__list-item-link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-6-desktop.webp 1x, img/photo-6-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-6-tablet.webp 1x, img/photo-6-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-6-mobile.webp 1x, img/photo-6-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
                 <img class="photos__list-item-img" src="img/photo-6-mobile.jpg" srcset="img/photo-6-mobile.jpg 2x" alt="Крыло самолёта на фоне закатного неба">
@@ -167,6 +189,8 @@
           <form class="photos__publish-form" action="https://echo.htmlacademy.ru" method="post">
             <div class="photos__publish-form-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-example-tablet-desktop.webp 1x, img/photo-example-tablet-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-example-mobile.webp 1x, img/photo-example-mobile@2x.webp 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-example-tablet-desktop.jpg 1x, img/photo-example-tablet-desktop@2x.jpg 2x">
                 <img class="photos__publish-form-img" src="img/photo-example-mobile.jpg" srcset="img/photo-example-mobile@2x.jpg 2x" alt="Заснеженная дорога">
               </picture>
@@ -223,10 +247,14 @@
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a class="page-footer__link" href="index.html">
-            <svg width="147" height="40">
-              <use class="page-footer__logo-img" xlink:href="img/sprite.svg#main-logo-icon"></use>
-              <use class="page-footer__text-img" xlink:href="img/sprite.svg#main-text-icon" x="72" y="17"></use>
-              <use class="page-footer__full-beauty-img" xlink:href="img/sprite.svg#main-full-beauty-icon-2"></use>
+            <svg class="page-footer__logo-img" width="59" height="40">
+              <use xlink:href="img/sprite.svg#main-logo-icon"></use>
+            </svg>
+            <svg class="page-footer__text-img" width="74" height="23">
+              <use xlink:href="img/sprite.svg#main-text-icon"></use>
+            </svg>
+            <svg class="page-footer__full-beauty-img" width="147" height="40">
+              <use xlink:href="img/sprite.svg#main-full-beauty-icon-2"></use>
             </svg>
           </a>
         </div>
@@ -270,6 +298,6 @@
         </section>
       </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
