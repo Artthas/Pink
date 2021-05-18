@@ -33,6 +33,11 @@
 
 .page-footer__logo-img {
   fill: @red;
+  margin-right: 7px;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 
   @media (min-width: @desktop-width) {
     display: none;
@@ -58,6 +63,11 @@
 
 .page-footer__link:hover svg,
 .page-footer__link:focus svg {
+  fill: @red;
+}
+
+.page-footer__link--active:hover .page-footer__logo-img,
+.page-footer__link--active:focus .page-footer__logo-img {
   fill: @red;
 }
 
