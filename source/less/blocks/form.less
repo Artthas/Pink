@@ -1,5 +1,5 @@
 .form {
-  margin-top: 54px;
+  margin-top: 44px;
 
   @media (min-width: @tablet-width) {
     width: 620px;
@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 100px;
+    margin-top: 91px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,25 +22,25 @@
   text-transform: uppercase;
   text-align: center;
   color: @red;
-  padding-left: 31px;
-  padding-right: 31px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .form__caption {
   line-height: 30px;
   width: 280px;
-  margin: 0 auto 45px auto;
+  margin: 0 auto 35px auto;
   text-align: center;
   order: -4;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 95px;
+    margin-bottom: 72px;
   }
 }
 
@@ -62,14 +62,14 @@
 
 .form__wrapper {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
 
   @media (min-width: @tablet-width) {
     width: 620px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
@@ -86,10 +86,10 @@
   border: none;
   border-radius: 4px;
   width: 100%;
-  padding: 17px 0;
+  padding: 17px 0 16px 0;
   color: @white;
   background-color: @green;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 
   &:hover,
   &:focus {
@@ -101,13 +101,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 296px;
+    width: 300px;
     margin: 0;
   }
 }
 
 .form__subscription {
   display: block;
+  font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
@@ -128,8 +129,9 @@
 // User Name
 
 .form__user-name {
+  box-sizing: border-box;
   width: 280px;
-  margin: 0 auto 45px auto;
+  margin: 0 auto 42px auto;
   padding: 0;
   order: -3;
   border: none;
@@ -137,20 +139,32 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 46%;
+    width: 46.3%;
     margin: 0;
   }
 }
 
 .form__user-name label {
+  display: block;
   line-height: 30px;
   text-transform: uppercase;
   color: @red;
-  margin-right: 20px;
+  margin-left: 23px;
+  margin-bottom: 5px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-right: 17px;
+    margin-top: 7px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 19px;
+  }
 }
 
 .form__user-name input {
@@ -167,6 +181,10 @@
   &:focus {
     border-color: @red;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 20px 20px 20px;
+  }
 }
 
 .form__user-name input::placeholder {
@@ -176,13 +194,17 @@
 }
 
 .form__user-name p {
-  margin-top: 27px;
+  margin-top: 17px;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     align-items: center;
-    margin-top: 57px;
+    margin-top: 52px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 53px;
   }
 }
 
@@ -193,32 +215,48 @@
 // User Achievements
 
 .form__user-achievements {
+  box-sizing: border-box;
   width: 280px;
   margin: 0 auto;
-  padding: 0 0 50px 0;
+  padding: 0 0 47px 0;
   border: none;
 
   @media (min-width: @tablet-width) {
     width: 100%;
     border: 2px solid @grey-light;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 60px;
   }
 }
 
 .form__wrapper-user-achievements {
   background-color: @grey-super-light;
-  padding-top: 42px;
+  padding-top: 39px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
     padding-top: 0;
-    padding-bottom: 60px;
-    margin-top: 65px;
+    padding-bottom: 0;
+    margin-top: 59px;
     background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 57px;
   }
 }
 
 .form__user-achievements legend {
-  margin-bottom: 44px;
+  margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 27px;
+    padding-right: 29px;
+    margin-bottom: 47px;
+  }
 }
 
 .form__user-achievements-list {
@@ -227,7 +265,7 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    padding-left: 60px;
+    padding-left: 58px;
     padding-right: 60px;
   }
 
@@ -236,16 +274,24 @@
     grid-template-columns: 280px 270px 1fr;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: column;
-    column-gap: 30px;
-    row-gap: 55px;
+    column-gap: 32px;
+    row-gap: 53px;
+    padding-right: 50px;
+    padding-left: 58px;
   }
 }
 
 .form__user-achievements-item:not(:first-of-type) {
-  margin-top: 47px;
+  margin-top: 52px;
 
   @media (min-width: @desktop-width) {
     margin: 0;
+  }
+}
+
+.form__user-achievements-item {
+  @media (min-width: @desktop-width) {
+    max-width: 270px;
   }
 }
 
@@ -288,21 +334,27 @@
 .form__user-contacts {
   width: 280px;
   margin: 0 auto;
-  padding: 40px 0 42px 0;
+  padding: 32px 0 42px 0;
   border: none;
 
   @media (min-width: @tablet-width) {
     width: 100%;
     order: -1;
     border: 2px solid @grey-light;
-    margin-top: 65px;
+    margin-top: 58px;
     padding-right: 60px;
-    padding-left: 60px;
+    padding-left: 57px;
+    padding-top: 36px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    padding-right: 58px;
+    padding-left: 58px;
+    padding-top: 33px;
+    padding-bottom: 13px;
   }
 }
 
@@ -320,13 +372,14 @@
   line-height: 30px;
   text-transform: uppercase;
   color: @red;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  margin-bottom: 5px;
+  margin-left: 24px;
 
   @media (min-width: @tablet-width) {
     order: 1;
     margin-top: 10px;
     margin-bottom: 0;
+    margin-left: 19px;
   }
 }
 
@@ -338,7 +391,8 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    border-right: 63px solid @grey-light;
+    border-right: 60px solid @grey-light;
+    padding: 24px 20px 20px 20px;
   }
 
   &:hover {
@@ -387,12 +441,13 @@
 
 .form__user-contacts p {
   position: relative;
-  margin-top: 27px;
+  margin-top: 17px;
   margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
+    margin-top: 29px;
   }
 
   @media (min-width: @desktop-width) {
@@ -411,19 +466,19 @@
   box-sizing: border-box;
   width: 280px;
   margin: 0 auto;
-  padding: 0 0 42px 0;
+  padding: 0 0 45px 0;
   border: none;
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    padding-bottom: 60px;
+    padding-bottom: 57px;
     border: 2px solid @grey-light;
   }
 }
 
 .form__wrapper-user-app {
   background-color: @grey-super-light;
-  padding-top: 42px;
+  padding-top: 39px;
 
   @media (min-width: @tablet-width) {
     order: -2;
@@ -433,12 +488,16 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 46%;
+    width: 46.3%;
   }
 }
 
 .form__user-app legend {
   margin-bottom: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 49px;
+  }
 }
 
 .form__user-app-list {
@@ -448,7 +507,11 @@
 }
 
 .form__user-app-item:not(:last-of-type) {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 46px;
+  }
 }
 
 .form__user-app-item label {
@@ -459,7 +522,11 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 61px;
-    margin-left: 60px;
+    margin-left: 57px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 72px;
   }
 }
 
@@ -496,20 +563,22 @@
   width: 280px;
   margin: 0 auto;
   padding: 20px 0 0 0;
-  margin-top: 42px;
-  margin-bottom: 40px;
+  margin-top: 38px;
+  margin-bottom: 41px;
   border: none;
 
   @media (min-width: @tablet-width) {
     width: 100%;
     border: 2px solid @grey-light;
-    margin-top: 65px;
-    padding: 42px 60px 53px 60px;
-    margin-bottom: 70px;
+    margin-top: 58px;
+    padding: 41px 60px 44px 58px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 45px;
+    padding: 38px 58px 36px 58px;
+    margin-top: 57px;
+    margin-bottom: 65px;
   }
 }
 
@@ -519,13 +588,19 @@
   text-align: center;
   color: @red;
   margin-top: 42px;
+  margin-bottom: -4px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .form__user-text {
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 23px 20px;
+  padding: 14px 20px;
   width: 100%;
   min-height: 201px;
 

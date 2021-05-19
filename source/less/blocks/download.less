@@ -1,70 +1,50 @@
 .download {
   box-sizing: border-box;
   background-color: @dark-blue;
-  padding-bottom: 38px;
+  padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     background-image:
-      url("../../img/screen-tablet.png"),
       url("../../img/phone-hand-tablet.png"),
       url("../../img/back-palace-tablet.png");
     background-repeat:
       no-repeat,
-      no-repeat,
       no-repeat;
     background-size:
-      195px 346px,
       660px 545px,
       cover;
     background-position:
-      79.9% 238px,
-      79.9% bottom,
+      center bottom,
       0% 0%;
-    height: 729px;
-    padding-top: 212px;
+    height: 728px;
+    padding-top: 203px;
     padding-bottom: 119px;
 
     @media (min-resolution: 2dppx) {
       background-image:
-        url("../../img/retina/screen-tablet@2x.png"),
         url("../../img/retina/phone-hand-tablet@2x.png"),
         url("../../img/retina/back-palace-tablet@2x.png");
     }
   }
 
   @media (min-width: @desktop-width) {
-    background-image:
-      url("../../img/screen-desktop.png"),
-      url("../../img/phone-hand-desktop.png"),
-      url("../../img/back-palace-desktop.png");
-    background-repeat:
-      no-repeat,
-      no-repeat,
-      no-repeat;
-    background-size:
-      230px 408px,
-      1050px 645px,
-      cover;
-    background-position:
-      69.5% 272px,
-      69.5% bottom,
-      0% 0%;
+    background-image: url("../../img/back-palace-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 0%;
     height: 853px;
-    padding-top: 224px;
+    padding-top: 209px;
     padding-bottom: 130px;
 
     @media (min-resolution: 2dppx) {
-      background-image:
-        url("../../img/retina/screen-desktop@2x.png"),
-        url("../../img/retina/phone-hand-desktop@2x.png"),
-        url("../../img/retina/back-palace-desktop@2x.png");
+      background-image: url("../../img/retina/back-palace-desktop@2x.png");
     }
   }
 }
 
 .download__header {
-  min-height: 367px;
-  padding-top: 95px;
+  min-height: 374px;
+  padding-top: 89px;
   background-image:
     url("../../img/screen-mobile.png"),
     url("../../img/phone-hand-mobile.png"),
@@ -150,22 +130,49 @@
   @media (min-width: @tablet-width) {
     width: 620px;
     margin: 0 auto;
+    background-image: url("../../img/screen-tablet.png");
+    background-repeat: no-repeat;
+    background-size: 195px 346px;
+    background-position: 351px 35px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/retina/screen-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: 940px;
     margin: 0 auto;
+    padding-bottom: 107px;
+    background-image:
+      url("../../img/screen-desktop.png"),
+      url("../../img/phone-hand-desktop.png");
+    background-repeat:
+      no-repeat,
+      no-repeat;
+    background-size:
+      230px 408px,
+      1050px 645px;
+    background-position:
+      82.7% 26.5%,
+      -15% bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/retina/screen-desktop@2x.png"),
+        url("../../img/retina/phone-hand-desktop@2x.png");
+    }
   }
 }
 
 .download__list {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  padding: 0 20px;
+  margin-top: 32px;
+  margin-bottom: 21px;
+  padding: 0 24px;
   list-style: none;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-end;
 
   @media (min-width: @tablet-width) {
     margin-top: 45px;
@@ -173,11 +180,25 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 65px;
+    margin-top: 69px;
     margin-bottom: 45px;
   }
 }
 
+.download__list-item:first-of-type {
+  width: 47px;
+  height: 56px;
+}
+
+.download__list-item:nth-of-type(2) {
+  width: 43px;
+  height: 51px;
+}
+
+.download__list-item:last-of-type {
+  width: 44px;
+  height: 45px;
+}
 
 .download__button {
   font-size: 18px;
@@ -186,12 +207,12 @@
   color: @white;
   text-decoration: none;
   display: block;
-  padding-top: 16px;
-  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 16px;
   border: 3px solid @white;
   border-radius: 35px;
   text-align: center;
-  margin-top: 28px;
+  margin-top: 27px;
 
   &:hover,
   &:focus {
@@ -207,6 +228,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
     font-size: 21px;
+    margin-top: 36px;
   }
 }
 
@@ -217,5 +239,10 @@
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+    margin-top: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 50px;
   }
 }
