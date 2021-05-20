@@ -9,6 +9,12 @@
     <link rel="icon" href="img/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensans.woff" as="font">
+    <link rel="preload" href="/fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="/fonts/opensanslight.woff" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff" as="font">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -102,7 +108,7 @@
         <header class="advantages__header">
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="advantages__intro">Устали от серости мегаполиса?</p>
-          <p class="advantages__intro">Нам есть что вам предложить!</p>
+          <p class="advantages__intro">Нам есть, что вам предложить!</p>
         </header>
         <ul class="advantages__list">
           <li class="advantages__item">
@@ -111,18 +117,18 @@
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            <p class="advantages__description">Сделайте снимок и украсьте&nbsp;его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <h3 class="advantages__title">Заводит новых&nbsp;друзей</h3>
+            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и&nbsp;заводите новых</p>
           </li>
         </ul>
         <div class="advantages__extra">
           <div class="advantages__extra-wrapper">
             <div class="advantages__extra-container">
-              <h3 class="advantages__extra-title">Эффект на 24 часа!</h3>
-              <p class="advantages__extra-description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <h3 class="advantages__extra-title">Эффект на&nbsp;24 часа!</h3>
+              <p class="advantages__extra-description">Британские ученые провели исследования и&nbsp;доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!</p>
               <a class="advantages__extra-link" href="#">Узнать больше об исследовании</a>
             </div>
           </div>
@@ -141,6 +147,20 @@
                 А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
           </div>
+          <p class="reviews__toggles-pointers">
+            <button class="reviews__toggle-pointer" type="button">
+              <span class="visually-hidden">Влево</span>
+              <svg width="22" height="41" viewBox="0 0 22 41" fill="#283645" opacity="0.3">
+                <use xlink:href="img/sprite.svg#left-arrow-icon"></use>
+              </svg>
+            </button>
+            <button class="reviews__toggle-pointer" type="button">
+              <span class="visually-hidden">Вправо</span>
+              <svg width="22" height="41" viewBox="0 0 22 41" fill="#283645" opacity="0.3">
+                <use xlink:href="img/sprite.svg#right-arrow-icon"></use>
+              </svg>
+            </button>
+          </p>
           <p class="reviews__toggles">
             <button class="reviews__toggle reviews__toggle--current" type="button">
               <span class="visually-hidden">1</span>
@@ -238,8 +258,8 @@
             <td class="rates__table-data">
               <div class="rates__table-data-wrapper">
                 <span>Смайлики</span>
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="#F25B26">
-                  <use xlink:href="img/sprite.svg#nomark-icon"></use>
+                <svg width="31" height="21" viewBox="0 0 31 21" fill="#3DC644">
+                  <use xlink:href="img/sprite.svg#yesmark-icon"></use>
                 </svg>
               </div>
             </td>
