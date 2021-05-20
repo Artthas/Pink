@@ -132,8 +132,27 @@
     display: none;
   }
 
-  .page-header__nav--nojs .page-header__nav-list-item {
-    display: block;
+  .page-header__nav--nojs {
+    .page-header__nav-list-item:not(:first-of-type) {
+      display: block;
+      background-color: @grey;
+      box-shadow:
+        inset 0 1px 0 @black-transparent,
+        inset 0 -1px 0 @black;
+    }
+
+    .page-header__nav-list-item:first-of-type {
+      display: block;
+      background-color: @grey;
+      box-shadow: inset 0 -1px 0 @black;
+      padding-top: 23px;
+      padding-bottom: 24px;
+
+      @media (min-width: @tablet-width) {
+        padding-top: 27px;
+        padding-bottom: 43px;
+      }
+    }
   }
 
   .page-header__nav--closed .page-header__nav-list-item:first-of-type {
