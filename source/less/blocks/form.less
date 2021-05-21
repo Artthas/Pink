@@ -100,6 +100,11 @@
     color: @white-transparent;
   }
 
+  &:disabled {
+    color: @white;
+    background-color: @grey-light;
+  }
+
   @media (min-width: @tablet-width) {
     width: 300px;
     margin: 0;
@@ -171,14 +176,15 @@
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 22px 20px;
+  padding: 25px 20px 19px 20px;
   width: 100%;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @grey;
   }
 
-  &:focus {
+  &:active {
     border-color: @red;
   }
 
@@ -191,6 +197,7 @@
   font-size: 18px;
   line-height: 30px;
   color: @grey;
+  letter-spacing: 0.5px;
 }
 
 .form__user-name p {
@@ -387,19 +394,21 @@
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 22px 20px;
+  padding: 24px 20px 20px 20px;
   width: 100%;
+  letter-spacing: 0.5px;
 
   @media (min-width: @tablet-width) {
     border-right: 60px solid @grey-light;
     padding: 24px 20px 20px 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @grey;
   }
 
-  &:focus {
+  &:active {
     border-color: @red;
 
     @media (min-width: @tablet-width) {
@@ -608,11 +617,12 @@
   width: 100%;
   min-height: 201px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @grey;
   }
 
-  &:focus {
+  &:active {
     border-color: @red;
   }
 

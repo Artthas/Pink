@@ -49,6 +49,14 @@
 
 .photos__list-item-img {
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 400px;
+  }
 }
 
 .photos__main-item-wrapper {
@@ -603,7 +611,6 @@
   @media (min-width: @tablet-width) {
     position: relative;
     box-sizing: border-box;
-    padding-top: 10px;
     height: 20px;
     width: 202px;
     margin-right: 18px;
@@ -622,7 +629,7 @@
   opacity: 0.5;
 
   @media (min-width: @tablet-width) {
-    opacity: 1;
+    fill: @grey;
   }
 }
 
@@ -631,6 +638,14 @@
 .photos__publish-label--active:focus svg {
   fill: @red;
   opacity: 1;
+}
+
+.photos__publish-label--active:hover svg,
+.photos__publish-label--active:focus svg {
+  @media (min-width: @tablet-width) {
+    fill: @grey;
+    opacity: 0.5;
+  }
 }
 
 .photos__publish-button-submit {
