@@ -8,7 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-top: 91px;
   }
 
@@ -40,7 +40,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 72px;
+    margin-bottom: 86px;
   }
 }
 
@@ -176,20 +176,18 @@
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 25px 20px 19px 20px;
+  padding: 15px 20px 14px 20px;
   width: 100%;
+  font-size: 18px;
+  line-height: 30px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: @grey;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: @red;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 24px 20px 20px 20px;
   }
 }
 
@@ -197,7 +195,7 @@
   font-size: 18px;
   line-height: 30px;
   color: @grey;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
 .form__user-name p {
@@ -235,7 +233,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 60px;
+    padding-bottom: 12px;
   }
 }
 
@@ -262,7 +260,7 @@
   @media (min-width: @tablet-width) {
     padding-left: 27px;
     padding-right: 29px;
-    margin-bottom: 47px;
+    margin-bottom: 43px;
   }
 }
 
@@ -277,13 +275,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 280px 270px 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-flow: column;
-    column-gap: 32px;
-    row-gap: 53px;
-    padding-right: 50px;
+    overflow: visible;
+    padding: 0;
+    column-count: 3;
+    column-gap: 47px;
+    break-inside: avoid-column;
     padding-left: 58px;
   }
 }
@@ -292,28 +288,33 @@
   margin-top: 52px;
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin-top: 0;
   }
 }
 
 .form__user-achievements-item {
   @media (min-width: @desktop-width) {
-    max-width: 270px;
+    margin-bottom: 47px;
   }
 }
 
 .form__user-achievements-item label {
+  display: block;
   font-size: 18px;
   line-height: 30px;
   padding-left: 59px;
   position: relative;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+  }
 }
 
 .form__user-achievements-item label::before {
   content: "";
   position: absolute;
   left: 0;
-  top: -7px;
+  top: 0;
   width: 35px;
   height: 35px;
   border: 2px solid @grey-light;
@@ -358,6 +359,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-right: 58px;
     padding-left: 58px;
     padding-top: 33px;
@@ -394,21 +396,23 @@
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
-  padding: 24px 20px 20px 20px;
+  padding: 15px 20px 14px 20px;
   width: 100%;
   letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 30px;
 
   @media (min-width: @tablet-width) {
     border-right: 60px solid @grey-light;
-    padding: 24px 20px 20px 20px;
+    padding: 15px 20px 14px 20px;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: @grey;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: @red;
 
     @media (min-width: @tablet-width) {
@@ -494,6 +498,7 @@
     width: 100%;
     background-color: transparent;
     padding: 0;
+    margin-top: -13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -528,6 +533,7 @@
 }
 
 .form__user-app-item label {
+  display: block;
   font-size: 18px;
   line-height: 30px;
   padding-left: 70px;
@@ -616,13 +622,15 @@
   padding: 14px 20px;
   width: 100%;
   min-height: 201px;
+  font-size: 18px;
+  line-height: 30px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: @grey;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: @red;
   }
 

@@ -391,6 +391,16 @@
 }
 
 .advantages__extra-link {
+  &:hover,
+  &:focus {
+    color: @grey;
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     display: block;
     color: @red;

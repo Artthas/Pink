@@ -28,10 +28,6 @@
   }
 }
 
-.page-footer__logo {
-  text-align: center;
-}
-
 .page-footer__logo-img {
   fill: @red;
   margin-right: 8px;
@@ -54,7 +50,14 @@
 }
 
 .page-footer__link {
+  display: block;
+  margin: auto;
+  width: 147px;
   color: transparent;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .page-footer__link:hover .page-footer__text-img,
@@ -101,20 +104,27 @@
   }
 }
 
+.page-footer__social-item:not(:last-of-type) {
+  margin-right: 8px;
+}
+
 .page-footer__social-list {
   padding: 0;
   margin: 31px auto 33px auto;
-  width: 179px;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
+    max-width: 320px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 174px;
+    margin: 0;
+    max-width: 620px;
   }
 }
 
