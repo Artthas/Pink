@@ -328,10 +328,12 @@
     width: 275px;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 7px;
   }
 
   @media (min-width: @desktop-width) {
     width: 410px;
+    margin-top: 0;
   }
 }
 
@@ -389,10 +391,12 @@
   height: 44px;
 
   @media (min-width: @tablet-width) {
-    padding: 7px 0 21px 0;
+    padding-bottom: 24px;
     width: 100%;
     height: 22px;
     text-align: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid @grey-light;
 
     label {
       display: block;
@@ -411,8 +415,9 @@
 
   @media (min-width: @desktop-width) {
     margin-top: -2px;
-    padding: 0 0 10px 0;
     height: 44px;
+    padding-bottom: 14px;
+    margin-bottom: 12px;
 
     label {
       width: 44px;
@@ -438,10 +443,10 @@
   height: 43px;
 
   @media (min-width: @tablet-width) {
-    padding: 27px 0 23px 0;
+    padding-bottom: 24px;
+    margin-bottom: 22px;
     width: 100%;
     height: 22px;
-    border-top: 1px solid @grey-light;
     border-bottom: 1px solid @grey-light;
 
     label {
@@ -460,8 +465,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 15px 0 14px 0;
     height: 43px;
+    padding-bottom: 14px;
+    margin-bottom: 15px;
 
     label {
       width: 48px;
@@ -493,7 +499,8 @@
   height: 32px;
 
   @media (min-width: @tablet-width) {
-    padding: 21px 0 30px 0;
+    padding-bottom: 28px;
+    margin-bottom: 22px;
     width: 100%;
     height: 16px;
     text-align: center;
@@ -515,9 +522,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 16px 0 0 0;
     height: 32px;
     border: none;
+    padding-bottom: 14px;
+    margin-bottom: 12px;
 
     label {
       width: 32px;
